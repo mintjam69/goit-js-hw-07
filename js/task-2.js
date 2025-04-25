@@ -38,6 +38,7 @@ console.log(galleryItems)
 
 /* Оптимізований варіант */
 
+
 // const gallery = document.querySelector('ul.gallery');
 
 // images.forEach(({ url, alt }) => {
@@ -53,4 +54,23 @@ console.log(galleryItems)
 //   gallery.appendChild(li);
 // });
 
+
 /* /Оптимізований варіант */
+
+
+
+/* /Повна функція */
+
+// const galleryItems = images.map(function(image) {
+//   const url = image.url;
+//   const alt = image.alt;
+
+//   const htmlString = `<li class="gallery-item">
+//     <img src="${url}" alt="${alt}" class="gallery-image">
+//   </li>`;
+
+//   return htmlString;
+// }).join('');
+
+
+/* /Повна функція */
