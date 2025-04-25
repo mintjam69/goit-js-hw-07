@@ -24,3 +24,32 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const galleryItems = images.map(({ url, alt }) =>
+  `<li class="gallery-item">
+    <img src="${url}" alt="${alt}" class="gallery-image">
+  </li>`
+).join('');
+const gallery = document.querySelector('ul.gallery');
+gallery.insertAdjacentHTML('beforeend', galleryItems);
+console.log(galleryItems)
+
+
+/* Оптимізований варіант */
+
+// const gallery = document.querySelector('ul.gallery');
+
+// images.forEach(({ url, alt }) => {
+//   const li = document.createElement('li');
+//   li.classList.add('gallery-item');
+
+//   const img = document.createElement('img');
+//   img.src = url;
+//   img.alt = alt;
+//   img.classList.add('gallery-image');
+
+//   li.appendChild(img);
+//   gallery.appendChild(li);
+// });
+
+/* /Оптимізований варіант */
